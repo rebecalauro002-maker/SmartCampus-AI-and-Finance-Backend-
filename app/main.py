@@ -79,7 +79,6 @@ def categorize(merchant: str) -> str: #defines a function that takes a merchant 
     return "miscellaneous" #returns "miscellaneous" if no matching category is found for the merchant name
 
 # FastAPI Endpoint to Upload and Process Transactions CSV
-# FastAPI Endpoint to Upload and Process Transactions CSV
 @app.post("/upload-transactions/") #defines a POST endpoint in the FastAPI application that allows users to upload a CSV file containing transaction data.
 async def upload_transactions(file: UploadFile = File(...)): #defines an asynchronous function to handle the CSV upload and processing
     if not file.filename.endswith('.csv'): #checks if the uploaded file has a '.csv' extension
